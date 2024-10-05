@@ -1,0 +1,49 @@
+.background{
+    background-color: blue;
+    height: 100px;
+}
+
+.login {
+    background: linear-gradient(180deg, #AFDCB1 31.2%, #82C4DA 63.57%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    border: 2px solid aliceblue;
+    background-color: #FFFFFF;
+    width: 659px;
+    height: 25rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.email-pwd-label{
+    display: flex;
+    flex-direction:column;
+    gap: 5px;
+}
+
+.display-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+}
+.login-button{
+    width: 100%;
+}
+.email-pwd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    gap: 12px;
+}
