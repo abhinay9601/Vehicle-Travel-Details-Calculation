@@ -37,6 +37,7 @@ function TripDetails() {
     const [finalReports, setFinalReports] = useState([]);
     const [show, setShow] = useState(false);
     const [totalTripsInFile, setTotaltripsinfile] = useState(0);
+    const [page, setpage] = useState(0);
 
     // MAP DATA
     function tripMapShow(tripsDetailsResults) {
@@ -126,7 +127,8 @@ function TripDetails() {
     }
 
     const showReportDetails = (event, newvalue) => {
-        setCurrentFile(showTripsintab[newvalue])
+        setCurrentFile(showTripsintab[newvalue]);
+        setpage(0);
     }
 
     useEffect(() => {
@@ -139,7 +141,8 @@ function TripDetails() {
     //CHANGE PAGE
     const handlePageClick = (event) => {
         setFinalReports([]);
-        fetchReportDetails(event.selected + 1)
+        fetchReportDetails(event.selected + 1);
+        setpage(event.selected);
     };
 
     //HANDLE BACK
@@ -318,6 +321,7 @@ function TripDetails() {
 
                     </div>
                     <ReactPaginate
+                        forcePage={page}
                         nextLabel="Next >"
                         onPageChange={handlePageClick}
                         pageRangeDisplayed={1}
@@ -346,6 +350,7 @@ function TripDetails() {
                 setShow={setShow}
                 showtriplist={false}
                 setCurrentFile={setCurrentFile}
+                setpage={() => setpage(0)}
             />
         </div >
     )
