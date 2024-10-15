@@ -9,7 +9,8 @@ function FileUpload({
     setShow,
     showTripList,
     getAllTrips,
-    setCurrentFile
+    setCurrentFile,
+    setpage
 }) {
 
     const [savedisable, setSavedisable] = useState(false);
@@ -60,6 +61,7 @@ function FileUpload({
                             } else {
                                 handleClose();
                                 setCurrentFile(fileName);
+                                setpage(0);
                             }
                         }
                     })
