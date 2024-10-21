@@ -105,7 +105,8 @@ function FileUpload({
                         value={fileName}
                     />
                     {FilePresentError && <p style={{ color: 'red' }}>File Name is already Present</p>}
-                    <Card className='d-flex align-items-center border-primary w-75 mt-4'>
+                    <Card className='d-flex align-items-center border-primary w-75 mt-4'
+                            onClick={() =>  document.getElementById('csvFileInput').click()}>
                         <input
                             id='csvFileInput'
                             type="file"
@@ -113,7 +114,7 @@ function FileUpload({
                             style={{ display: 'none' }}
                             onChange={handleFileChange}
                         />
-                        <img className='w-25' onClick={() => { document.getElementById('csvFileInput').click() }} src={UploadLogo} />
+                        <img className='w-25'  src={UploadLogo} />
                         <Form.Label className='my-3 mx-4 text-info' >Upload the Excel sheet of your trip</Form.Label>
                     </Card>
                     <div className='d-flex w-75 mt-3'>

@@ -210,9 +210,9 @@ function TripList() {
                                         {
                                             tripsList.length > 0 ? (
                                                 tripsList.map((e) => (
-                                                    <tr key={e?._id}>
+                                                    <tr key={e?._id}  onClick={() => handleCheckBox(e)} type={"checkbox"} >
                                                         <td>
-                                                            <Form.Check checked={e?.checked} onChange={() => handleCheckBox(e)} type={"checkbox"} />
+                                                            <Form.Check checked={e?.checked}/>
                                                         </td>
                                                         <td>{e?.tripname}</td>
                                                         <td></td>

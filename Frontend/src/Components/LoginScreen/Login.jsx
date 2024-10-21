@@ -16,6 +16,7 @@ const Login = () => {
         'Content-Type': 'application/json'
       }
     });
+    
     if (response.data.error === 'Invalid password' && response.data.status === 400) {
       setInvalidPassword(true);
     } else if (response.status === 200) {
