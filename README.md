@@ -1,34 +1,59 @@
-This project aims to develop a system that calculates vehicle travel details, including distance traveled, speed, overspeed, and stopped time, from a given set of coordinates in a CSV file. The system will also display the travel locations on a map.
+# Vehicle Travel Details Calculation System
 
-FUNCTIONAL REQUIREMENTS
+This project develops a system to calculate and visualize vehicle travel details, including distance traveled, speed, overspeed instances, and stopped time, based on GPS coordinates from a CSV file. It also displays travel locations on a map.
 
-1.CSV File Upload: The system will allow users to upload a CSV file containing the vehicle's coordinates (latitude and longitude) along with timestamps.
+---
 
-2.Data Processing: The system will process the uploaded data to calculate the following:
-Distance traveled between each pair of coordinates
-Speed at each point (using the distance and time difference between consecutive coordinates)
-Overspeed instances (based on a predefined speed limit)
-Stopped time (when the vehicle is stationary for a certain period)
+## **Functional Requirements**
 
-3.Map Visualization: The system will display the travel locations on a map, using a mapping library Leaflet.
+- **CSV File Upload**  
+  - Users can upload a CSV file containing vehicle coordinates (latitude and longitude) along with timestamps.
 
-4.Data Visualization: The system will provide a dashboard to display the calculated travel details, including:
-Total distance traveled
-Total Travelled Duration
-Over Speeding Duration
-Over Speeding Distance
-Stopped Duration
+- **Data Processing**  
+  - The system calculates:
+    - Distance traveled between each pair of coordinates.
+    - Speed at each point, using distance and time difference between consecutive coordinates.
+    - Overspeed instances based on a predefined speed limit.
+    - Stopped time when the vehicle remains stationary for a defined period.
 
-TECHNICAL REQUIREMENTS
+- **Map Visualization**  
+  - Displays the travel route and locations on a map using the `Leaflet` library.
 
-1.Backend: Node.js with Express.js framework.
-2.Frontend: React JS with a mapping library react-leaflet.
-3.Database: Mongo DB
+- **Data Visualization Dashboard**  
+  - Provides a summary of the calculated travel details, including:
+    - **Total Distance Traveled**  
+    - **Total Travel Duration**  
+    - **Overspeeding Duration**  
+    - **Overspeeding Distance**  
+    - **Stopped Duration**
 
-SYSTEM ARCHITECTURE
+---
 
-1.CSV File Upload: The user uploads a CSV file to the server.
-2.Data Processing: The server processes the uploaded data using Node.js and calculates the travel details.
-3.Map Visualization: The server sends the processed data to the client, which displays the travel locations on a map using a react-leaflet library.
-4.Data Visualization: The client displays the calculated travel details on a dashboard.
+## **Technical Requirements**
 
+- **Backend**  
+  - Node.js with Express.js framework
+
+- **Frontend**  
+  - React.js with `react-leaflet` library for mapping
+
+- **Database**  
+  - MongoDB for data storage
+
+---
+
+## **System Architecture**
+
+1. **CSV File Upload**  
+   - The user uploads a CSV file to the server.
+
+2. **Data Processing**  
+   - The server processes the uploaded data using Node.js to calculate travel details.
+
+3. **Map Visualization**  
+   - The server sends the processed data to the frontend, which displays the route and locations using the `react-leaflet` library.
+
+4. **Data Visualization**  
+   - The client shows calculated travel details on a dashboard for easy monitoring.
+
+---
